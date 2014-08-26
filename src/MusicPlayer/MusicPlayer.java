@@ -8,7 +8,7 @@ public class MusicPlayer {
 		// TODO Auto-generated method stub
 		window1 w = new window1();
 		w.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		w.setSize(300, 300);
+		w.setSize(500, 300);;
 		w.setVisible(true);
 	}
 
