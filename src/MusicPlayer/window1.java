@@ -15,9 +15,13 @@ import java.awt.CardLayout;
 import javax.swing.BoxLayout;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+import javax.swing.JLabel;
+import com.jgoodies.forms.factories.DefaultComponentFactory;
 
 public class window1 extends JFrame{
 	public window1() {
+		super("Music");
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		
 		Playlist p = new Playlist();
 		Bar b = new Bar();
