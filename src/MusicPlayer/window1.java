@@ -23,8 +23,9 @@ public class window1 extends JFrame{
 		super("Music");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		
-		Playlist p = new Playlist();
 		Bar b = new Bar();
+		Playlist p = new Playlist();
+		Library l = new Library();
 		
 		JPanel bar = b.bar();
 		getContentPane().add(bar,BorderLayout.NORTH);
@@ -33,6 +34,7 @@ public class window1 extends JFrame{
 		getContentPane().add(tabbedPane, BorderLayout.CENTER);
 		
 		tabbedPane.addTab("Playlist", p.playlist());
+		tabbedPane.addTab("Library", l.library());
 		
 		
 	}
