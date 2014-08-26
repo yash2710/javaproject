@@ -19,7 +19,11 @@ import java.awt.event.MouseEvent;
 public class window1 extends JFrame{
 	public window1() {
 		
-		final Playlist p = new Playlist();
+		Playlist p = new Playlist();
+		Bar b = new Bar();
+		
+		JPanel bar = b.bar();
+		getContentPane().add(bar,BorderLayout.NORTH);
 		
 		JTabbedPane tabbedPane = new JTabbedPane(JTabbedPane.TOP);
 		getContentPane().add(tabbedPane, BorderLayout.CENTER);
