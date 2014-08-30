@@ -23,6 +23,9 @@ public class Bar extends JFrame {
 		JButton btnStop = new JButton("Stop");
 		panel.add(btnStop);
 		
+//		JButton btnEql = new JButton("Equalizer");
+//		panel.add(btnEql);
+		
 		return panel;
 	}
 

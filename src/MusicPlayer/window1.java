@@ -31,7 +31,7 @@ public class window1 extends JFrame{
 		getContentPane().add(bar,BorderLayout.NORTH);
 		
 		JTabbedPane tabbedPane = new JTabbedPane(JTabbedPane.TOP);
-		getContentPane().add(tabbedPane, BorderLayout.CENTER);
+		getContentPane().add(tabbedPane, BorderLayout.WEST);
 		
 		tabbedPane.addTab("Playlist", p.playlist());
 		tabbedPane.addTab("Library", l.library());
