@@ -10,30 +10,32 @@ import javax.swing.ListSelectionModel;
 import javax.swing.event.ListSelectionEvent;
 import javax.swing.event.ListSelectionListener;
 
-public class Playlist extends JFrame{
-	 JPanel playlist() {
-//		 super("Playlist");
-		getContentPane().setLayout(new BorderLayout(0, 0));
+public class Playlist extends JFrame {
+	JPanel playlist() {
+		// super("Playlist");
+
+		PlaylistPanel p = new PlaylistPanel();
+		
+		getContentPane().setLayout(getLayout());
 		JPanel panel = new JPanel();
 		getContentPane().add(panel, BorderLayout.WEST);
-		String[] pLists = {"Recently Added", "Recently Played"};
-		
+		String[] pLists = { "Recently Added", "Recently Played" };
+
 		JList list = new JList(pLists);
 		list.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
 		panel.add(new JScrollPane(list));
-		list.addListSelectionListener(
-				new ListSelectionListener() {
-					
-					@Override
-					public void valueChanged(ListSelectionEvent arg0) {
-						// TODO Auto-generated method stub
-						
-					}
-				});
-		
+		panel.add(p.playlistPanel());
+		list.addListSelectionListener(new ListSelectionListener() {
+
+			@Override
+			public void valueChanged(ListSelectionEvent arg0) {
+				// TODO Auto-generated method stub
+
+			}
+		});
+
 		return panel;
-		
+
 	}
-	
 
 }
