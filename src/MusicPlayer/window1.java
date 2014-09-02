@@ -38,4 +38,8 @@ public class window1 extends JFrame{
 		
 		
 	}
+	
+	public int getWidth(){
+		return getContentPane().getWidth();
+	}
 }
