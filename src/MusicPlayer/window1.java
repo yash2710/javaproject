@@ -19,15 +19,18 @@ import javax.swing.JLabel;
 import com.jgoodies.forms.factories.DefaultComponentFactory;
 
 public class window1 extends JFrame{
+	window1 w = new window1();
+	
 	public window1() {
 		super("Music");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		
-		
-		
-		
 	}
 	
+	JFrame frame(){
+
+		return w;
+	}
 	public int getWidth(){
 		return getContentPane().getWidth();
 	}

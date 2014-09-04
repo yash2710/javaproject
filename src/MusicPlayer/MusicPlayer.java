@@ -28,8 +28,8 @@ public class MusicPlayer {
 		JTabbedPane tabbedPane = new JTabbedPane(JTabbedPane.TOP);
 //		getContentPane().add(tabbedPane, BorderLayout.CENTER);
 		
-//		tabbedPane.addTab("Playlist", p);
-//		tabbedPane.addTab("Library", l);
+		tabbedPane.addTab("Playlist", p.panel());
+		tabbedPane.addTab("Library", l.panel());
 		
 		w.setVisible(true);
 	}
