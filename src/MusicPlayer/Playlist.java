@@ -24,7 +24,7 @@ public class Playlist extends JFrame {
 		JList list = new JList(pLists);
 		list.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
 		panel.add(new JScrollPane(list));
-		panel.add(p.playlistPanel());
+//		panel.add(p.playlistPanel());
 		list.addListSelectionListener(new ListSelectionListener() {
 
 			@Override
