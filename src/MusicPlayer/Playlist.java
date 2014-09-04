@@ -11,7 +11,7 @@ import javax.swing.event.ListSelectionEvent;
 import javax.swing.event.ListSelectionListener;
 
 public class Playlist extends JFrame {
-	Playlist() {
+	JPanel panel() {
 		// super("Playlist");
 
 		
@@ -34,7 +34,7 @@ public class Playlist extends JFrame {
 			}
 		});
 
-//		return panel;
+		return panel;
 
 	}
 

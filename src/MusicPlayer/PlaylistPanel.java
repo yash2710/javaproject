@@ -9,7 +9,7 @@ import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 
 public class PlaylistPanel extends JFrame {
-	PlaylistPanel() {
+	JPanel panel() {
 		
 		String[] s = {"a","b"};
 		
@@ -21,7 +21,7 @@ public class PlaylistPanel extends JFrame {
 		getContentPane().setLayout(getLayout());
 		panel.add(new JScrollPane(list));
 		
-//		return panel;
+		return panel;
 	}
 
 	

@@ -6,7 +6,7 @@ import java.awt.BorderLayout;
 import javax.swing.JButton;
 
 public class Bar extends JFrame {
-	Bar() {
+	JPanel panel() {
 		
 		JPanel panel = new JPanel();
 		getContentPane().add(panel, BorderLayout.NORTH);
@@ -26,7 +26,7 @@ public class Bar extends JFrame {
 //		JButton btnEql = new JButton("Equalizer");
 //		panel.add(btnEql);
 		
-//		return panel;
+		return panel;
 	}
 
 	
