@@ -12,10 +12,7 @@ import javax.swing.event.ListSelectionListener;
 
 public class Playlist extends JFrame {
 	JPanel panel() {
-		// super("Playlist");
 
-		
-		
 		getContentPane().setLayout(getLayout());
 		JPanel panel = new JPanel();
 		getContentPane().add(panel, BorderLayout.WEST);
@@ -24,7 +21,6 @@ public class Playlist extends JFrame {
 		JList list = new JList(pLists);
 		list.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
 		panel.add(new JScrollPane(list));
-//		panel.add(p.playlistPanel());
 		list.addListSelectionListener(new ListSelectionListener() {
 
 			@Override

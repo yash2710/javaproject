@@ -8,34 +8,29 @@ import javax.swing.JTabbedPane;
 
 public class MusicPlayer {
 
-	static int x;
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		window1 w = new window1();
-		w.setSize(500, 300);
-//		w.pack();
-//		x = w.getContentPane().getWidth();
-//		System.out.println(x);
-		
-		Bar b = new Bar();
-		Playlist p = new Playlist();
-		Library l = new Library();
-		PlaylistPanel pl = new PlaylistPanel();
-		
-//		JPanel bar = b.bar();
-//		getContentPane().add(bar,BorderLayout.NORTH);
-		
+		window1 window = new window1();
+
+		JFrame frame = window.frame();
+		frame.setSize(500, 300);
+
+		Bar o_bar = new Bar();
+		Playlist o_playlist = new Playlist();
+		Library o_library = new Library();
+		PlaylistPanel o_playlistpanel = new PlaylistPanel();
+
+		JPanel bar_panel = o_bar.panel();
+		JPanel tabbed_playlist = o_playlist.panel();
+		JPanel tabbed_playlist_panel = o_playlistpanel.panel();
+		tabbed_playlist.add(tabbed_playlist_panel);
+		frame.getContentPane().add(bar_panel, BorderLayout.NORTH);
+
 		JTabbedPane tabbedPane = new JTabbedPane(JTabbedPane.TOP);
-//		getContentPane().add(tabbedPane, BorderLayout.CENTER);
-		
-		tabbedPane.addTab("Playlist", p.panel());
-		tabbedPane.addTab("Library", l.panel());
-		
-		w.setVisible(true);
-	}
-	
-	static int getWidth(){
-		return x;
+		frame.getContentPane().add(tabbedPane, BorderLayout.CENTER);
+
+		tabbedPane.addTab("Playlist", tabbed_playlist_panel);
+		tabbedPane.addTab("Library", o_library.panel());
+		frame.setVisible(true);
 	}
 
 }

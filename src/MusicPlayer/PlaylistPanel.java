@@ -17,7 +17,6 @@ public class PlaylistPanel extends JFrame {
 //		list.setMaximumSize(new Dimension(50,50));
 		JPanel panel = new JPanel();
 //		list.setPreferredSize(new Dimension(MusicPlayer.x,getContentPane().getHeight()));
-		System.out.println(MusicPlayer.getWidth());
 		getContentPane().setLayout(getLayout());
 		panel.add(new JScrollPane(list));
 		
