@@ -14,14 +14,11 @@ public class MusicPlayer {
 		JFrame frame = window.frame();
 		frame.setSize(500, 300);
 
-		Bar o_bar = new Bar();
-		Playlist o_playlist = new Playlist();
-		Library o_library = new Library();
-		PlaylistPanel o_playlistpanel = new PlaylistPanel();
+		Panels panel = new Panels();
 
-		JPanel bar_panel = o_bar.panel();
-		JPanel tabbed_playlist = o_playlist.panel();
-		JPanel tabbed_playlist_panel = o_playlistpanel.panel();
+		JPanel bar_panel = panel.Bar();
+		JPanel tabbed_playlist = panel.Playlist();
+		JPanel tabbed_playlist_panel = panel.PlaylistPanel();
 		tabbed_playlist.add(tabbed_playlist_panel);
 		frame.getContentPane().add(bar_panel, BorderLayout.NORTH);
 
@@ -29,7 +26,7 @@ public class MusicPlayer {
 		frame.getContentPane().add(tabbedPane, BorderLayout.CENTER);
 
 		tabbedPane.addTab("Playlist", tabbed_playlist_panel);
-		tabbedPane.addTab("Library", o_library.panel());
+		tabbedPane.addTab("Library", panel.Library());
 		frame.setVisible(true);
 	}
 
