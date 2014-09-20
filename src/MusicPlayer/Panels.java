@@ -1,6 +1,7 @@
 package MusicPlayer;
 
 import java.awt.BorderLayout;
+import java.awt.Dimension;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
@@ -35,17 +36,16 @@ public class Panels extends JFrame {
 
 	}
 
-	JPanel PlaylistPanel() {
+	JPanel PlaylistPanel(int w,int h) {
 
 		String[] s = { "a", "b" };
 
-		JList list = new JList(s);
-		// list.setMaximumSize(new Dimension(50,50));
+		JList<String> list = new JList<String>(s);
 		JPanel panel = new JPanel();
-		// list.setPreferredSize(new
-		// Dimension(MusicPlayer.x,getContentPane().getHeight()));
+		JScrollPane scroll = new JScrollPane(list);
+		scroll.setPreferredSize(new Dimension((int)(w*0.7),h));
 		getContentPane().setLayout(getLayout());
-		panel.add(new JScrollPane(list));
+		panel.add(scroll);
 
 		return panel;
 	}
